@@ -27,6 +27,8 @@ class Question:
     def checkScore(self):
         if(self.Stig == 5):
             print('Thu vannst leikinn!!')
+            self.c.close()
+            self.conn.close()
             sys.exit()
             
     #Athugar hvort leikmadur setti inn rett svar        
@@ -65,6 +67,8 @@ class Question:
             self.spilaLeik(level)
         else:
             print('Okei Bless.')
+            self.c.close()
+            self.conn.close()
             sys.exit()
             
             
@@ -80,7 +84,10 @@ def main():
     
 if __name__  == '__main__':
     main()
-
+    
+    
+    
+## A dagskra:
 ## Setja upp Try blokkir
 ## Birta Skyringu a svari ef leikmadur svarar rett
 ## Birta mynd med spurningu?
