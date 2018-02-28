@@ -45,7 +45,7 @@ class Question:
             self.Stig = 0
               
     #Flaedi leiksins
-    def spilaLeik(self,level):
+    def playGame(self,level):
         x = self.getQuestion(level)
         
         for i in range(0,len(x)):
@@ -55,16 +55,16 @@ class Question:
             self.checkAnswer(x[i][1], svar)
             
         while(True):
-            self.spilaAfram()
+            self.playMore()
         
     #Vill leikmadur halda afram ad reyna?
-    def spilaAfram(self):
+    def playMore(self):
         print('Viltu halda afram?')
         svar = input('j / n: \n' )
         if(svar == 'j'):
             print('Veldu erfidleikastig, 1, 2 eda 3')
             level = input()
-            self.spilaLeik(level)
+            self.playGame(level)
         else:
             print('Okei Bless.')
             self.c.close()
@@ -79,7 +79,7 @@ def main():
     Spurn = Question()
     print('Velkominn i spurningarleik Bisamrottunnar. \nThu tharft ad svara 5 spurningum rett i rod til ad vinna leikinn.  \nVeldu erfidleikastig fyrir spurningarnar: 1, 2 eda 3. ')
     level = input()
-    Spurn.spilaLeik(level)
+    Spurn.playGame(level)
     
     
 if __name__  == '__main__':
