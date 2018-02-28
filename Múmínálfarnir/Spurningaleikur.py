@@ -70,7 +70,7 @@ class Question:
             
     
     
-# Main fall leiksins
+# Main fall leiksins.
 def main():
     Spurn = Question()
     print('Velkominn i spurningarleik Bisamrottunnar. \nThu tharft ad svara 5 spurningum rett i rod til ad vinna leikinn.  \nVeldu erfidleikastig fyrir spurningarnar: 1, 2 eda 3. ')
@@ -81,6 +81,9 @@ def main():
 if __name__  == '__main__':
     main()
 
+## Setja upp Try blokkir
+## Birta Skyringu a svari ef leikmadur svarar rett
+## Birta mynd med spurningu?
 
 
 
